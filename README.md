@@ -128,3 +128,25 @@ How will we review?
 -------------------
 
 [Guidelines can be found here](https://github.com/uber/coding-challenge-tools/blob/master/README.md)
+
+## Dependencias
+
+```
+<dependency>
+    <groupId>com.amazonaws</groupId>
+    <artifactId>aws-java-sdk-ses</artifactId>
+    <version>1.12.472</version>
+</dependency>
+```
+
+## como testar 
+```
+$ curl --request POST \
+  --url http://localhost:8080/api/email/send \
+  --header 'Content-Type: application/json' \
+  --data '{
+	"to":"fabio.alvaro@gmail.com",
+	"subject":"teste",
+	"body":"hello from teste"
+}'
+```
